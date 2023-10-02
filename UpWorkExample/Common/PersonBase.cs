@@ -9,6 +9,7 @@ namespace UpWorkExample.Common
     public class PersonBase<TKey>:EntityBase<TKey>
     {
         public string FirstName { get; set; }
+
         public string LastName { get; set; }
 
     }

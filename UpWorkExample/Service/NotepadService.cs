@@ -21,7 +21,7 @@ namespace UpWorkExample.Service
             }
 
             string filePath = $"{path}\\{type}s.txt";
-            File.AppendAllText(filePath, $"{data.GetValueCSV}\n");
+            File.AppendAllText(filePath, $"{data.GetValueCSV()}\n");
         }
         public string GetOnNotepad(string path)
         {

@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 using UpWorkExample.Common;
 using UpWorkExample.Abstract;
 using UpWorkExample.Entities;
@@ -13,23 +13,29 @@ using UpWorkExample.Service;
     WorkExperience = "5 years of experience in web development"
 };*/
 
-var anotherCustomerInstance = new Customer
+/*var anotherCustomerInstance = new Customer
 {
     Id = Guid.NewGuid(),
     CreatedOn = DateTime.Now,
     FirstName = "Alex",
     LastName = "Mc Kenny",
     PhoneNumber = "545-167-3000"
-};
+};*/
 
+var review = new Review()
+{
+    Text = "Excellent freelancer!",
+    Rating = 5
+
+}
 
 NotepadService notepadService = new NotepadService();
-notepadService.SaveToNotepad(anotherCustomerInstance);
+notepadService.SaveToNotepad(review);
 
 
 
 
-//string customerData = notepadService.GetOnNotepad("C:\\Users\\ahmet\\OneDrive\\Documents\\GitHub\\Backend_Lecture_Materials\\Lecture_3\\Freelancer\\Database\\Customers.txt");
+//string customerData = notepadService.GetOnNotepad("C:\Users\cengi\yetgen_akbank_bootcamp\UpworkExample\UpWorkExample\Database");
 //
 //string[] splittedLines = customerData.Split("\n", StringSplitOptions.RemoveEmptyEntries);
 
